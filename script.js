@@ -10,6 +10,7 @@ data: {
     etapa: 1,
     inputNome:"",
     inputEndereco:"",
+    novoPedidoAssincrono: null,
 },
 methods: {
     fazerpedido(){
@@ -25,7 +26,7 @@ methods: {
             this.etapa = 3
         }else {alert('Preencha o nome e o endereço')
     }
-    setTimeout(() => this.novoP(), 7000)
+    this.novoPedidoAssincrono = setTimeout(() => this.novoP(), 7000)
     },
     novoP(){
         this.etapa = 1
@@ -96,6 +97,14 @@ computed: {
     
   },
   
+},
+    watch: {
+        etapa(novoValor) {
+            if(novoValor == 1) {
+                clearTimeout(this.novoPedidoAssincrono)
+            }
+        }
+
 }
 
 })
