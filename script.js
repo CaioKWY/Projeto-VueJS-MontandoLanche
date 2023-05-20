@@ -19,6 +19,11 @@ methods: {
         }else {
             alert("Você precisa selecionar um pão e um hambuguer!")
         }
+    },
+    confirmarpedido(){
+        if(this.inputNome && this.inputEndereco){
+            this.etapa = 3
+        }else {alert('Preencha o nome e o endereço')}
     }
 
 },
