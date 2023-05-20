@@ -185,7 +185,27 @@
                 </div>
               </div>
         </div>
-
+        <div class="col-md-6" v-if="etapa == 3">
+          <div class="row mt-2">
+            <div class="col">
+              <div class="card">
+              <div class="card-header">
+               PEDIDO CONFIRMADO</div>
+               
+              <div class="card-body">
+              <P>Agora é só aguardar 10 minutos!</P>
+              <p>Vamos chamar você em breve</p>  
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row mt-2">
+            <div class="col d-flex justify-content-between">
+              <button type="button" class="btn btn-warning" @click="etapa --">Voltar para o lanche</button>
+              <button type="button" class="btn btn-success" @click="confirmarpedido()" >Confirmar</button>
+            </div>
+          </div>
+    </div>
 
     </div>
 
