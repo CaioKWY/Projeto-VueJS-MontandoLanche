@@ -23,7 +23,18 @@ methods: {
     confirmarpedido(){
         if(this.inputNome && this.inputEndereco){
             this.etapa = 3
-        }else {alert('Preencha o nome e o endereço')}
+        }else {alert('Preencha o nome e o endereço')
+    }
+    setTimeout(() => this.novoP(), 7000)
+    },
+    novoP(){
+        this.etapa = 1
+        this.inputPao = ""
+        this.inputMolhos = []
+        this.inputSalada = []
+        this.inputHamburguer = ""
+        this.inputNome= ""
+        this.inputEndereco = ""
     }
 
 },
